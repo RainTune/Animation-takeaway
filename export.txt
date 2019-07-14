@@ -1,0 +1,27 @@
+// 在node中 使用 var 名称 = require('模块表示符'来导入)
+// 使用module.exports = {} 来导出
+//
+
+//在ES6中使用 import 模块名称 from ‘模块标示符’来进行导入
+//在ES6中，使用export default 和 export 向外暴露成员：
+//一个模块中，只允许使用export default向外暴露一次
+//但是可以用多次export
+//用export导出的内容名称必须与定义的变量一致，如果想用另外的名字则需要这么写
+import m2 , { title as title123 } from './文件名'
+
+var info = {
+    name: 'bill',
+    age: '25'
+}
+export default info;
+或者
+export default {
+   name: 'bill',
+   age: '25'
+}
+
+接收
+import m1 from './文件名'；
+
+用export var title = '小人'导入
+用import m2 , { title } from './文件名'

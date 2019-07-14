@@ -1,0 +1,31 @@
+/*定义px-rem转换*/
+@function p2r($px) {
+  @return ($px/64) * 1rem;
+}
+/*定义背景和定位*/
+@mixin bg($url) {
+  background: url($url) center no-repeat / 100% 100%;
+  position: absolute;
+}
+/*定义背景图片水平居中*/
+@mixin bgc($url,$w) {
+  background: url($url) center no-repeat / 100% 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: p2r(-$w/2);
+}
+/*定义大小*/
+@mixin size($w,$h) {
+  width: p2r($w);
+  height: p2r($h);
+}
+/*定义上面距离和左边距离*/
+@mixin topLeft($t,$l){
+  top: p2r($t);
+  left: p2r($l);
+}
+@mixin center($w) {
+  position: absolute;
+  left: 50%;
+  margin-left: p2r(-$w/2);
+}
